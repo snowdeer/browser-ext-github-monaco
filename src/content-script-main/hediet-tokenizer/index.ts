@@ -121,7 +121,7 @@ export type Token<TTokenInfo extends {}, TState> = TTokenInfo & {
 	text: string;
 };
 
-type MatchResult<TTokenInfo, TState> =
+type MatchResult<TTokenInfo extends {}, TState> =
 	| {
 			matches: true;
 			nextState: TState;
@@ -136,7 +136,7 @@ type MatchResult<TTokenInfo, TState> =
 			offsetOfNextPossibleMatch: number;
 	  };
 
-abstract class Rule<TTokenInfo, TState> {
+abstract class Rule<TTokenInfo extends {}, TState> {
 	abstract match(
 		state: TState,
 		text: string,
