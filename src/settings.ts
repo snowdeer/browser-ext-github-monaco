@@ -23,7 +23,7 @@ export const defaultSettings: MonacoOptions = {
 	contextmenu: true,
 	copyWithSyntaxHighlighting: true,
 	cursorBlinking: "blink",
-	cursorSmoothCaretAnimation: false,
+	cursorSmoothCaretAnimation: "on",
 	cursorStyle: "line",
 	// If cursorStyle is "line", the next one also applies:
 	cursorWidth: 0,
@@ -36,7 +36,7 @@ export const defaultSettings: MonacoOptions = {
 	find: {
 		addExtraSpaceOnTop: true,
 		autoFindInSelection: "never",
-		seedSearchStringFromSelection: true,
+		seedSearchStringFromSelection: "always",
 	},
 	folding: true,
 	foldingHighlight: true,
@@ -47,7 +47,6 @@ export const defaultSettings: MonacoOptions = {
 	fontWeight: "normal",
 	glyphMargin: false,
 	hideCursorInOverviewRuler: false,
-	highlightActiveIndentGuide: true,
 	insertSpaces: true,
 	letterSpacing: 0,
 	lineDecorationsWidth: 10,
@@ -66,8 +65,7 @@ export const defaultSettings: MonacoOptions = {
 	quickSuggestions: true,
 	quickSuggestionsDelay: 10,
 	renderControlCharacters: false,
-	renderFinalNewline: true,
-	renderIndentGuides: true,
+	renderFinalNewline: "on",
 	renderLineHighlight: "line", // The docs says the default is "all", but this is wrong
 	renderWhitespace: "none",
 	roundedSelection: true,
